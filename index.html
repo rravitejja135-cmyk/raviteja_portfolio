@@ -301,8 +301,59 @@
     }
 
     /* MOBILE */
+    .floating-icon{
+  position:absolute;
+  width:70px;
+  height:70px;
+  border-radius:18px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:24px;
+  font-weight:700;
+  color:white;
+  z-index:5;
+  animation:iconFloat 4s ease-in-out infinite;
+}
 
-    @media(max-width:768px){
+.ps{
+  top:20%;
+  left:15%;
+}
+
+.ai{
+  top:20%;
+  right:15%;
+}
+
+.pr{
+  bottom:20%;
+  left:18%;
+}
+
+.ae{
+  bottom:20%;
+  right:18%;
+}
+
+@keyframes iconFloat{
+  0%,100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-15px);
+  }
+}
+
+    @media(max-width:768px){.floating-icon{
+  width:50px;
+  height:50px;
+  font-size:18px;
+}
 
       nav ul{
         display:none;
